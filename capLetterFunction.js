@@ -1,10 +1,29 @@
-function capWords(word1, word2){
-  return word1 + " " + word2;
+function capWords(word1){
+//Seperate words in a string based on spaces
+  let splitWords = word1.split(" ");
+  let capArray = [];
+for (let i = 0;i < splitWords.length; i++){
+  let word =  splitWords[i];
+  let capWord = word[0].toUpperCase() + word.slice(1);
+  capArray.push(capWord);
 }
+  let result = capArray.join(" ");
+  return result;
+}
+
 function getUserInput(){
-  let txt= prompt("Type in a word (lower case)");
-  return txt;
+  let input = prompt();
+  return input;
 }
-let word1=getUserInput();
-let word2=getUserInput();
-console.log(capWords(word1, word2));
+
+  console.log(capWords(getUserInput()));
+
+  // let input = prompt();
+  // let txt= capWords(input);
+  //
+  // console.log(txt);
+
+ //functionExample("Hello", "World");
+//function joined or concatenates words together
+//console.log(capWords(word1));
+//console.log(capWords(word2));

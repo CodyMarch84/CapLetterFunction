@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 function capWords(word1){
 //Seperate words in a string based on spaces
